@@ -19,6 +19,11 @@ return [
     'drivers' => [
         'consul' => [
             'uri' => 'http://127.0.0.1:8500',
+            'token' => '',
+            'check' => [
+                'deregister_critical_service_after' => '90m',
+                'interval' => '1s',
+            ],
         ],
     ],
 ];
